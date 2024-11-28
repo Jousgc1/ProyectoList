@@ -27,7 +27,7 @@ npm install
 
 (Si encuentras conflictos de dependencias, intenta)
 bash
-npm install --legacy-peer-deps
+"npm install --legacy-peer-deps"
 
 4.1 Instalar Dependencias del Frontend
 bash
