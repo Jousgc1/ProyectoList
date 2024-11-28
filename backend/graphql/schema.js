@@ -12,7 +12,7 @@ const schema = buildSchema(`
     }
 
     type Query {
-        getTasks: [Task]
+        getTasks(title: String): [Task]
     }
 
     type Mutation {
@@ -23,8 +23,9 @@ const schema = buildSchema(`
 `);
 
 const root = {
-    getTasks: async () => {
-        return await Task.find();
+    getTasks: async ({ title }) => {
+        const query = title ? { title: new RegExp(title, 'i') } : {};
+        return await Task.find(query);
     },
     createTask: async ({ title, description, status }) => {
         const newTask = new Task({ title, description, status });
