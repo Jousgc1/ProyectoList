@@ -18,7 +18,7 @@ bash o git clone
 
 ## Cambia al directorio del proyecto clonado:
 
--cd AplicativoFullStack
+cd AplicativoFullStack
 
  4. BASH
 # Instalar dependencias para el backend
@@ -38,15 +38,15 @@ Asegúrate de que MongoDB esté corriendo en tu máquina. Si usas el servidor lo
 
 6. INICIAR EL BACKEND
 Cambia al directorio backend y ejecuta el servidor:
--cd backend
--npm start
+cd backend
+npm start
 Esto iniciará el servidor backend en "http://localhost:3100/api/tasks"
 
 7. INICIAR EL FRONTEND
 Cambia al directorio todo-app y ejecuta la aplicación de frontend:
 bash
--cd ../todo-app
--npm run dev
+cd ../todo-app
+npm run dev
 Esto iniciará la aplicación frontend en "(http://localhost:3000/)".
 
 iNTERACTUANDO  CON MongoDB
