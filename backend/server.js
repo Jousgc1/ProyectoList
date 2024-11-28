@@ -41,6 +41,9 @@ app.use('/graphql', graphqlHTTP({
     graphiql: true
 }));
 
+//puerto  3150 backend
 app.listen(3150, () => {
     console.log('http://localhost:3150/api/tasks');
 });
+
+
