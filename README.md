@@ -22,6 +22,7 @@ cd AplicativoFullStack
 
 4. Instalar Dependencias del Backend
 bash
+
 cd backend
 npm install
 
@@ -31,10 +32,14 @@ bash
 
 4.1 Instalar Dependencias del Frontend
 bash
+
 cd ../frontend
 npm install
+
 Si encuentras conflictos de dependencias, intenta:
+
 bash
+
 npm install " npm install --legacy-peer-deps "
 
 
