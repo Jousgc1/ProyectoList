@@ -20,18 +20,29 @@ bash o git clone
 
 cd AplicativoFullStack
 
- 4. BASH
-# Instalar dependencias para el backend
+4. Instalar Dependencias del Backend
+bash
 cd backend
 npm install
 
-# Instalar dependencias para el frontend
-cd ../todo-app
-npm install
+(Si encuentras conflictos de dependencias, intenta)
+bash
+npm install --legacy-peer-deps
 
-5. .ENV
+4.1 Instalar Dependencias del Frontend
+bash
+cd ../frontend
+npm install
+Si encuentras conflictos de dependencias, intenta:
+bash
+npm install " npm install --legacy-peer-deps "
+
+
+5. Configurar Variables de Entorno
+Crea un archivo .env en el directorio backend con la configuración necesaria:
+
 PORT=3100
-MONGODB_URI=mongodb://localhost:27017/todoapp
+MONGODB_URI=mongodb://<usuario>:<contraseña>@<host>:<puerto>/<nombreBD> o  mongodb://localhost:27017/todoapp
 
 Iniciar MongoDB
 Asegúrate de que MongoDB esté corriendo en tu máquina. Si usas el servidor local, puedes iniciarlo con: bash
@@ -40,7 +51,7 @@ Asegúrate de que MongoDB esté corriendo en tu máquina. Si usas el servidor lo
 Cambia al directorio backend y ejecuta el servidor:
 cd backend
 npm start
-Esto iniciará el servidor backend en "http://localhost:3100/api/tasks"
+Esto iniciará el servidor backend en "http://localhost:3150/api/tasks"
 
 7. INICIAR EL FRONTEND
 Cambia al directorio todo-app y ejecuta la aplicación de frontend:
