@@ -46,7 +46,7 @@ export default {
   },
 
   axios: {
-    baseURL: 'http://localhost:3100/api'
+    baseURL: 'http://localhost:3150/api'
   },
 
   // Apollo module configuration

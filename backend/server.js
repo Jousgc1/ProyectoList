@@ -41,6 +41,6 @@ app.use('/graphql', graphqlHTTP({
     graphiql: true
 }));
 
-app.listen(3100, () => {
-    console.log('http://localhost:3100/api/tasks');
+app.listen(3150, () => {
+    console.log('http://localhost:3150/api/tasks');
 });
