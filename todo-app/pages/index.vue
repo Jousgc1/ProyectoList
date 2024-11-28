@@ -1,6 +1,11 @@
 <template>
   <div class="container">
-    <h1 class="text-center my-4"> List</h1>
+    <div class="header">
+      <h1 class="text-center my-4">Lista de Tareas</h1>
+      <div class="search-section">
+        <SearchTasks />
+      </div>
+    </div>
     <form @submit.prevent="addTask" class="mb-4">
       <div class="form-group">
         <input v-model="newTask.title" type="text" class="form-control" placeholder="Título" required>
@@ -11,7 +16,7 @@
       <button type="submit" class="btn btn-primary">Añadir Tarea</button>
     </form>
     <ul class="list-group mb-4">
-      <li v-for="task in tasks" :key="task._id" class="list-group-item d-flex justify-content-between align-items-center">
+      <li v-for="(task, index) in tasks" :key="task._id" class="list-group-item d-flex justify-content-between align-items-center">
         <div>
           <p class="mb-1">{{ task.title }} - <span class="badge badge-secondary">{{ task.status }}</span></p>
           <p class="mb-1">Creado el: {{ new Date(task.createdAt).toLocaleString() }}</p>
@@ -23,7 +28,6 @@
         </div>
       </li>
     </ul>
-    <!-- Condición para cargar el componente de manera diferida -->
     <lazy-component v-if="showLazyComponent"></lazy-component>
     <div v-if="isEditing" class="mt-4">
       <h2>Editar Tarea</h2>
@@ -41,6 +45,8 @@
 </template>
 
 <script>
+import SearchTasks from '~/components/SearchTasks.vue';
+
 export default {
   data() {
     return {
@@ -56,7 +62,8 @@ export default {
     return { tasks: data };
   },
   components: {
-    LazyComponent: () => import('@/components/LazyComponent.vue')
+    LazyComponent: () => import('@/components/LazyComponent.vue'),
+    SearchTasks
   },
   methods: {
     async addTask() {
@@ -88,3 +95,21 @@ export default {
   }
 }
 </script>
+
+<style>
+.container {
+  background: linear-gradient(to right, #430a43, #7b8cfe);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-section {
+  position: relative;
+}
+</style>

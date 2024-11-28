@@ -1,9 +1,16 @@
 [
   {
+    "name": "SearchTask",
+    "path": "/SearchTask",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\FullStack\\\\todo-app\\\\pages\\\\SearchTask.vue",
+    "chunkName": "pages/SearchTask",
+    "_name": "_7b63f82c"
+  },
+  {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\frameworkNuxt\\\\frontend\\\\todo-app\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\USER\\\\Desktop\\\\FullStack\\\\todo-app\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_9c2e5386"
+    "_name": "_eb80ad3a"
   }
 ]

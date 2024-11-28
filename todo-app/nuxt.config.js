@@ -35,6 +35,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/apollo',
     '@nuxtjs/axios',
     'bootstrap-vue/nuxt',
   ],
@@ -46,6 +47,15 @@ export default {
 
   axios: {
     baseURL: 'http://localhost:3100/api'
+  },
+
+  // Apollo module configuration
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'http://localhost:3100/graphql',
+      },
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

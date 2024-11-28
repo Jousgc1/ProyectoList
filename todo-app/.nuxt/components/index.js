@@ -1,5 +1,6 @@
-export { default as LazyComponent } from '../..\\components\\lazyComponent.vue'
+export { default as LazyComponent } from '../..\\components\\LazyComponent.vue'
 export { default as NuxtLogo } from '../..\\components\\NuxtLogo.vue'
+export { default as SearchTasks } from '../..\\components\\SearchTasks.vue'
 export { default as Tutorial } from '../..\\components\\Tutorial.vue'
 
 // nuxt/nuxt.js#8607

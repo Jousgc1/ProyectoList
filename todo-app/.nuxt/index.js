@@ -12,9 +12,10 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_5df72b6c from 'nuxt_plugin_plugin_5df72b6c' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_bootstrapvue_61109e9c from 'nuxt_plugin_bootstrapvue_61109e9c' // Source: .\\bootstrap-vue.js (mode: 'all')
-import nuxt_plugin_axios_5f217d6d from 'nuxt_plugin_axios_5f217d6d' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_plugin_5bb59b9a from 'nuxt_plugin_plugin_5bb59b9a' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_bootstrapvue_7fa21028 from 'nuxt_plugin_bootstrapvue_7fa21028' // Source: .\\bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_axios_20d3b286 from 'nuxt_plugin_axios_20d3b286' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_apollomodule_964e34ee from 'nuxt_plugin_apollomodule_964e34ee' // Source: .\\apollo-module.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -182,16 +183,20 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_5df72b6c === 'function') {
-    await nuxt_plugin_plugin_5df72b6c(app.context, inject)
+  if (typeof nuxt_plugin_plugin_5bb59b9a === 'function') {
+    await nuxt_plugin_plugin_5bb59b9a(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_bootstrapvue_61109e9c === 'function') {
-    await nuxt_plugin_bootstrapvue_61109e9c(app.context, inject)
+  if (typeof nuxt_plugin_bootstrapvue_7fa21028 === 'function') {
+    await nuxt_plugin_bootstrapvue_7fa21028(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_5f217d6d === 'function') {
-    await nuxt_plugin_axios_5f217d6d(app.context, inject)
+  if (typeof nuxt_plugin_axios_20d3b286 === 'function') {
+    await nuxt_plugin_axios_20d3b286(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_apollomodule_964e34ee === 'function') {
+    await nuxt_plugin_apollomodule_964e34ee(app.context, inject)
   }
 
   // Lock enablePreview in context

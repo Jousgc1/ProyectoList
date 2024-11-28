@@ -1,9 +1,12 @@
 {
   "LazyComponent": {
-    "description": "Auto imported from components/lazyComponent.vue"
+    "description": "Auto imported from components/LazyComponent.vue"
   },
   "NuxtLogo": {
     "description": "Auto imported from components/NuxtLogo.vue"
+  },
+  "SearchTasks": {
+    "description": "Auto imported from components/SearchTasks.vue"
   },
   "Tutorial": {
     "description": "Auto imported from components/Tutorial.vue"
